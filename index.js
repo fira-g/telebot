@@ -87,7 +87,7 @@ try {
                     prevText = "/start"
         
                 }
-               else if(text==="Audio"){
+               else if(text==="🎧 Audio 🎧"){
                     const message = "🔷🔸Sermons In Audio 🔸🔷"
                     await audioPage(chatId,message)
                    prevText = "/start"
@@ -95,7 +95,7 @@ try {
                 }
                 else if(text === "Dispensation"){
                     dispensationPage(chatId,"♦️ Select the parts you want ♦️")
-                    prevText = "Audio"
+                    prevText = "🎧 Audio 🎧"
                 }
                 else if(text === "Dispensation-1"){
                     const messageIds = findIds("Dispensation-1")
@@ -121,7 +121,7 @@ try {
                 
                 else if(text === "5tu Frdoch"){
                     frdochPage(chatId,"♦️ Select the parts you want ♦️")
-                    prevText = "Audio"
+                    prevText = "🎧 Audio 🎧"
                 }
                 else if(text === "F-1"){
                     const messageIds = findIds("F-1")
@@ -145,7 +145,7 @@ try {
                 }
                 else if(text === "Yesetitu_Zer"){
                     yeSetituZerPage(chatId,"♦️ Select the parts you want ♦️")
-                    prevText = "Audio"
+                    prevText = "🎧 Audio 🎧"
                 }
                 else if(text === "YZ-1"){
                     const messageIds = findIds("YZ-1")
