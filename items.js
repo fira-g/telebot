@@ -10,10 +10,10 @@ export const items = [
         ids : Array.from({length:7}, (_, index) => 273 + index )},
     {
         name : "Eschatology(ye zemen ftsame)",
-        ids :Array.from({length:8}, (_, index) => 215 + index )},
+        ids :Array.from({length:8}, (_, index) => 213 + index )},
     {
         name : "3tu Wegenoch",
-        ids :Array.from({length:5}, (_, index) => 223 + index )},
+        ids :Array.from({length:5}, (_, index) => 221 + index )},
     {
         name : "F-1",
         ids :Array.from({length:5}, (_, index) => 280 + index )},
