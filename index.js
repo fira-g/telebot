@@ -60,7 +60,6 @@ try {
     
         let prevText;
         bot.on('message', async (msg)=>{
-            console.log(msg)
             const chatId = msg.chat.id
             const myId = process.env.MY_ID
             let text = msg.text
@@ -75,102 +74,102 @@ try {
                 } 
             }
                 
-                if(text === "/start"){
-                    const message = `Hello ${name}, Welcome to the bot ❤️.`
-                    await homePage(chatId,message)
-                  
-                    prevText = text
-                    
-                }
-                else if(text==="Books"){
-                    const message = "🔷🔸Spritual Books 🔸🔷"
-                    prevText = "/start"
-        
-                }
-               else if(text==="🎧 Audio 🎧"){
-                    const message = "🔷🔸Sermons In Audio 🔸🔷"
-                    await audioPage(chatId,message)
-                   prevText = "/start"
-                    
-                }
-                else if(text === "Dispensation"){
-                    dispensationPage(chatId,"♦️ Select the parts you want ♦️")
-                    prevText = "🎧 Audio 🎧"
-                }
-                else if(text === "Dispensation-1"){
-                    const messageIds = findIds("Dispensation-1")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
-                else if(text === "Dispensation-2"){
-                    const messageIds = findIds("Dispensation-2")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
-                else if(text === "Dispensation-3"){
-                    const messageIds = findIds("Dispensation-3")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
-
-                else if(text === "Eschatology(ye zemen ftsame)"){
-                    const messageIds = findIds("Eschatology(ye zemen ftsame)")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
+            if(text === "/start"){
+                const message = `Hello ${name}, Welcome to the bot ❤️.`
+                await homePage(chatId,message)
                 
-                else if(text === "5tu Frdoch"){
-                    frdochPage(chatId,"♦️ Select the parts you want ♦️")
-                    prevText = "🎧 Audio 🎧"
-                }
-                else if(text === "F-1"){
-                    const messageIds = findIds("F-1")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
-                else if(text === "F-2"){
-                    const messageIds = findIds("F-2")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
-                else if(text === "F-3"){
-                    const messageIds = findIds("F-3")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
-                else if(text === "3tu Wegenoch"){
-                    const messageIds = findIds("3tu Wegenoch")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
-                else if(text === "Yesetitu_Zer"){
-                    yeSetituZerPage(chatId,"♦️ Select the parts you want ♦️")
-                    prevText = "🎧 Audio 🎧"
-                }
-                else if(text === "YZ-1"){
-                    const messageIds = findIds("YZ-1")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
-                else if(text === "YZ-2"){
-                    const messageIds = findIds("YZ-2")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
-                else if(text === "YZ-3"){
-                    const messageIds = findIds("YZ-3")
-                    await bot.copyMessages(chatId,myId,messageIds)
-                    await bot.sendMessage(chatId,"Brought to you with ❤️")
-                }
+                prevText = text
+                
+            }
+            else if(text==="Books"){
+                const message = "🔷🔸Spritual Books 🔸🔷"
+                prevText = "/start"
     
+            }
+            else if(text==="🎧 Audio 🎧"){
+                const message = "🔷🔸Sermons In Audio 🔸🔷"
+                await audioPage(chatId,message)
+                prevText = "/start"
                 
-                else if(text === "🔝 Main Menu"){
-                    homePage(chatId,"🔝 Main Menu")
-                }
-                else{
-                    await bot.sendMessage(chatId,"⏳ Couldn't understand what you meant ⌛️\nTry to use the buttons🙏🏾")
-                }
-                
+            }
+            else if(text === "Dispensation"){
+                dispensationPage(chatId,"♦️ Select the parts you want ♦️")
+                prevText = "🎧 Audio 🎧"
+            }
+            else if(text === "Dispensation-1"){
+                const messageIds = findIds("Dispensation-1")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+            else if(text === "Dispensation-2"){
+                const messageIds = findIds("Dispensation-2")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+            else if(text === "Dispensation-3"){
+                const messageIds = findIds("Dispensation-3")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+
+            else if(text === "Eschatology(ye zemen ftsame)"){
+                const messageIds = findIds("Eschatology(ye zemen ftsame)")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+            
+            else if(text === "5tu Frdoch"){
+                frdochPage(chatId,"♦️ Select the parts you want ♦️")
+                prevText = "🎧 Audio 🎧"
+            }
+            else if(text === "F-1"){
+                const messageIds = findIds("F-1")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+            else if(text === "F-2"){
+                const messageIds = findIds("F-2")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+            else if(text === "F-3"){
+                const messageIds = findIds("F-3")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+            else if(text === "3tu Wegenoch"){
+                const messageIds = findIds("3tu Wegenoch")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+            else if(text === "Yesetitu_Zer"){
+                yeSetituZerPage(chatId,"♦️ Select the parts you want ♦️")
+                prevText = "🎧 Audio 🎧"
+            }
+            else if(text === "YZ-1"){
+                const messageIds = findIds("YZ-1")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+            else if(text === "YZ-2"){
+                const messageIds = findIds("YZ-2")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+            else if(text === "YZ-3"){
+                const messageIds = findIds("YZ-3")
+                await bot.copyMessages(chatId,myId,messageIds)
+                await bot.sendMessage(chatId,"Brought to you with ❤️")
+            }
+
+            
+            else if(text === "🔝 Main Menu"){
+                homePage(chatId,"🔝 Main Menu")
+            }
+            else if(text!=="🔙 Back"){
+                await bot.sendMessage(chatId,"⏳ Couldn't understand what you meant ⌛️\nTry to use the buttons🙏🏾")
+            }
+            
             
         })
     }
