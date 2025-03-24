@@ -12,7 +12,7 @@ export const items = [
         name : "Eschatology(ye zemen ftsame)",
         ids :Array.from({length:8}, (_, index) => 215 + index )},
     {
-        name : "sostu_wegenoch",
+        name : "3tu Wegenoch",
         ids :Array.from({length:5}, (_, index) => 223 + index )},
     {
         name : "F-1",
