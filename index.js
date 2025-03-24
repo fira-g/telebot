@@ -75,7 +75,7 @@ try {
                 } 
             }
                 
-                else if(text === "/start"){
+                if(text === "/start"){
                     const message = `Hello ${name}, Welcome to the bot ❤️.`
                     await homePage(chatId,message)
                   
