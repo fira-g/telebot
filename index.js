@@ -58,7 +58,7 @@ const frdochPage = async (chatId,message)=>{
 try {
 
     
-        let prevText,temp;
+        let prevText;
         bot.on('message', async (msg)=>{
             console.log(msg)
             const chatId = msg.chat.id
