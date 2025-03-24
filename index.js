@@ -99,23 +99,23 @@ try {
                 }
                 else if(text === "Dispensation-1"){
                     const messageIds = findIds("Dispensation-1")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
                 else if(text === "Dispensation-2"){
                     const messageIds = findIds("Dispensation-2")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
                 else if(text === "Dispensation-3"){
                     const messageIds = findIds("Dispensation-3")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
 
                 else if(text === "Eschatology(ye zemen ftsame)"){
                     const messageIds = findIds("Eschatology(ye zemen ftsame)")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
                 
@@ -125,22 +125,22 @@ try {
                 }
                 else if(text === "F-1"){
                     const messageIds = findIds("F-1")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
                 else if(text === "F-2"){
                     const messageIds = findIds("F-2")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
                 else if(text === "F-3"){
                     const messageIds = findIds("F-3")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
                 else if(text === "3tu Wegenoch"){
                     const messageIds = findIds("3tu Wegenoch")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
                 else if(text === "Yesetitu_Zer"){
@@ -149,17 +149,17 @@ try {
                 }
                 else if(text === "YZ-1"){
                     const messageIds = findIds("YZ-1")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
                 else if(text === "YZ-2"){
                     const messageIds = findIds("YZ-2")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
                 else if(text === "YZ-3"){
                     const messageIds = findIds("YZ-3")
-                    //await bot.copyMessages(chatId,myId,messageIds)
+                    await bot.copyMessages(chatId,myId,messageIds)
                     await bot.sendMessage(chatId,"Brought to you with ❤️")
                 }
     
@@ -167,9 +167,9 @@ try {
                 else if(text === "🔝 Main Menu"){
                     homePage(chatId,"🔝 Main Menu")
                 }
-                // else{
-                //     await bot.sendMessage(chatId,"⏳ Couldn't understand what you meant ⌛️\nTry to use the buttons🙏🏾")
-                // }
+                else{
+                    await bot.sendMessage(chatId,"⏳ Couldn't understand what you meant ⌛️\nTry to use the buttons🙏🏾")
+                }
                 
             
         })
