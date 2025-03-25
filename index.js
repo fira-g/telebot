@@ -55,9 +55,9 @@ const frdochPage = async (chatId,message)=>{
     })
 }
 
-try {
+app.post("*",()=>{
 
-    
+try {
         let prevText;
         bot.on('message', async (msg)=>{
             const chatId = msg.chat.id
@@ -81,9 +81,10 @@ try {
                 prevText = text
                 
             }
-            else if(text==="Books"){
-                const message = "🔷🔸Spritual Books 🔸🔷"
+            else if(text==="📚 Books 📚"){
+                //const message = "🔷🔸Spritual Books 🔸🔷"
                 prevText = "/start"
+                await bot.sendMessage(chatId,"⌛️ Books are being added please come back later. ⚒")
     
             }
             else if(text==="🎧 Audio 🎧"){
@@ -169,14 +170,15 @@ try {
             else if(text!=="🔙 Back"){
                 await bot.sendMessage(chatId,"⏳ Couldn't understand what you meant ⌛️\nTry to use the buttons🙏🏾")
             }
-            
-            
         })
-    }
-    
+    }    
  catch (error) {
     console.log(error.message)
-}
+}   
+})
+app.get("*", (req,res)=>{
+    res.send("This is just a server for a telegram bot")
+})
 
 app.listen(port, ()=>{
     console.log(`listening on port : ${port}`)
