@@ -55,7 +55,7 @@ const frdochPage = async (chatId,message)=>{
     })
 }
 
-app.post("*",()=>{
+app.post("*",(req,res)=>{
 
 try {
         let prevText;
