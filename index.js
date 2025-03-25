@@ -7,7 +7,9 @@ dotenv.config()
 const app = express()
 const port = process.env.PORT
 const token = process.env.TOKEN
-const webhookUrl = process.env.WEBHOOK_URL
+const webhookUrl = "https://telebot-g500.onrender.com"
+
+const bot = new TelegramBot(token)
 
 bot.setWebHook(`${webhookUrl}/telegram`);
 
@@ -17,7 +19,7 @@ app.post("/telegram", (req, res) => {
   res.sendStatus(200); // Acknowledge receipt
 });
 //📎📝📌🎧❤️🔥🙏🏾🎯😢📊📥📤📨📚✝🛐✅⬆️⬇️➡️⬅️🔴🟠🟡🟢🔵🟣⚫️⚪️🟤🔺🔻🔸🔹🔶🔷♥️♦️🏁🚨💻📲📱⌚️🎙⏳⌛️⚒🛠
-const bot = new TelegramBot(token)
+
 
 const homePage = (chatId,message)=>{
     bot.sendMessage(chatId,message, {
