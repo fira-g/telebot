@@ -7,10 +7,10 @@ dotenv.config()
 const app = express()
 const port = process.env.PORT
 const token = process.env.TOKEN
-const url = process.env.URL
+
 
 const bot = new TelegramBot(token)
-bot.setWebHook(`${url}/telegram`)
+
 
 
 // Express route to handle incoming updates
