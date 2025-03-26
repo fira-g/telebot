@@ -15,7 +15,9 @@ bot.setWebHook(`${url}/telegram`)
 
 // Express route to handle incoming updates
 app.post("/telegram", (req, res) => {
-  bot.processUpdate(req.body);
+    if(req.body && req.body.message){
+        bot.processUpdate(req.body)
+    };
   console.log("yes")
   res.sendStatus(200); // Acknowledge receipt
 });
