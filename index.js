@@ -7,15 +7,16 @@ dotenv.config()
 const app = express()
 const port = process.env.PORT
 const token = process.env.TOKEN
-
+const url = process.env.URL
 
 const bot = new TelegramBot(token)
-
+bot.setWebHook(`${url}/telegram`)
 
 
 // Express route to handle incoming updates
 app.post("/telegram", (req, res) => {
   bot.processUpdate(req.body);
+  console.log("yes")
   res.sendStatus(200); // Acknowledge receipt
 });
 //📎📝📌🎧❤️🔥🙏🏾🎯😢📊📥📤📨📚✝🛐✅⬆️⬇️➡️⬅️🔴🟠🟡🟢🔵🟣⚫️⚪️🟤🔺🔻🔸🔹🔶🔷♥️♦️🏁🚨💻📲📱⌚️🎙⏳⌛️⚒🛠
@@ -66,7 +67,6 @@ const frdochPage = async (chatId,message)=>{
     })
 }
 
-
 try {
         let prevText;
         bot.on('message', async (msg)=>{
@@ -74,6 +74,7 @@ try {
             const myId = process.env.MY_ID
             let text = msg.text
             const name = msg.from.first_name
+            console.log(text)
 
             if(text === "🔙 Back"){
                 if(prevText==="/start"){
@@ -185,6 +186,7 @@ try {
  catch (error) {
     console.log(error.message)
 }   
+
 
 app.get("*", (req,res)=>{
     res.send("This is just a server for a telegram bot")
