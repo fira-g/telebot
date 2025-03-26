@@ -72,7 +72,8 @@ const frdochPage = async (chatId,message)=>{
 try {
         let prevText;
         bot.on('message', async (msg)=>{
-            const chatId = msg.chat.id
+            try {
+                const chatId = msg.chat.id
             const myId = process.env.MY_ID
             let text = msg.text
             const name = msg.from.first_name
@@ -183,6 +184,10 @@ try {
             else if(text!=="🔙 Back"){
                 await bot.sendMessage(chatId,"⏳ Couldn't understand what you meant ⌛️\nTry to use the buttons🙏🏾")
             }
+            } catch (error) {
+                console.log(error.message)
+            }
+            
         })
     }    
  catch (error) {
